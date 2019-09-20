@@ -31,7 +31,7 @@ while run:
         y -= vel
     if keys[pygame.K_DOWN]:
         y += vel
-
+    
 
     win.fill((0,0,0))
     i = 0
