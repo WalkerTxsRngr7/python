@@ -7,17 +7,26 @@ pygame.display.set_caption("Mastermind")
 
 
 x = 100
-y = 50
+y = 40
 radius = 20
 width = 0
 vel = 100
 rowDrawn = False
 row = 1
 
-w, h = 6, 12
+w, h = 6, 11
 Rows = [[0 for x in range(w)] for y in range(h)] 
 
 run = True
+
+def board():
+    m = 10
+    z = 10
+    for j in range(11):
+        pygame.draw.rect(win, (125,125,125), (m,z, 680, 60), 5)
+        z += 70
+    pygame.display.update()
+        
 
 def drawRow():
     global rowDrawn
@@ -27,9 +36,6 @@ def drawRow():
     global width
     global vel
     for i in range(4):
-        
-        
-
         colorNum = random.randrange(6)
 
         if (colorNum == 0):  #red
@@ -54,6 +60,8 @@ def drawRow():
         x += 100
         rowDrawn = True
         i += 1
+
+
     print (Rows[0])
 
     
@@ -63,7 +71,7 @@ def drawRow():
 
 
 
-
+board()
 while run:
     pygame.time.delay(100)
 
