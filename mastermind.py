@@ -35,12 +35,16 @@ while run:
 
     win.fill((0,0,0))
     i = 0
+    
+
+
+
+pygame.quit()
+
+
+def drawRow():
     for i in range(4):
         i += 1
         pygame.draw.circle(win,(255,0,0), (x,y), radius)
         pygame.display.update()
         x += 60
-
-
-
-pygame.quit()
